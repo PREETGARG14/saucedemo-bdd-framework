@@ -1,0 +1,36 @@
+{
+    "name": "saucedemo-bdd-framework",
+    "version": "1.0.0",
+    "description": "BDD Automation Framework for SauceDemo using Playwright + Cucumber.js",
+    "main": "index.js",
+    "scripts": {
+        "test": "npx cucumber-js",
+        "test:smoke": "npx cucumber-js --tags @smoke",
+        "test:negative": "npx cucumber-js --tags @negative",
+        "test:e2e": "npx cucumber-js --tags @e2e",
+        "test:parallel": "npx cucumber-js --parallel 2",
+        "test:headed": "cross-env HEADLESS=false npx cucumber-js",
+        "test:firefox": "cross-env BROWSER=firefox npx cucumber-js",
+        "test:webkit": "cross-env BROWSER=webkit npx cucumber-js",
+        "test:retry": "npx cucumber-js --retry 1",
+        "report": "node support/reportGenerator.js"
+    },
+    "keywords": [
+        "playwright",
+        "cucumber",
+        "bdd",
+        "automation",
+        "saucedemo"
+    ],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@cucumber/cucumber": "^10.3.1",
+        "@playwright/test": "^1.41.0",
+        "playwright": "^1.41.0",
+        "dotenv": "^16.3.1",
+        "winston": "^3.11.0",
+        "multiple-cucumber-html-reporter": "^3.5.0",
+        "cross-env": "^7.0.3"
+    }
+}
