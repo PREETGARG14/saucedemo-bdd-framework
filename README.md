@@ -78,6 +78,10 @@ cp .env.example .env
 npm test
 ```
 
+**Test Execution Demo:**
+
+<video src="./SuaceDemo.mp4" width="800" controls></video>
+
 ### Run by Tag
 ```bash
 npm run test:smoke        # @smoke scenarios
