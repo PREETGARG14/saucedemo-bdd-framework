@@ -14,7 +14,6 @@ module.exports = {
         formatOptions: {
             snippetInterface: 'async-await'
         },
-        publishQuiet: true,
         retry: 0  // Set to 1 or 2 for flaky test resilience; use --retry CLI flag to override
     }
 };

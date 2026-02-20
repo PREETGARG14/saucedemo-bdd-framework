@@ -8,11 +8,14 @@
  *   • Track scenario duration for performance monitoring
  *   • Tear down browser after each scenario
  */
-const { Before, After, BeforeAll, AfterAll, Status } = require('@cucumber/cucumber');
+const { Before, After, BeforeAll, AfterAll, Status, setDefaultTimeout } = require('@cucumber/cucumber');
 const config = require('../config/config');
 const logger = require('./logger');
 const fs = require('fs');
 const path = require('path');
+
+// Set global timeout to 30 seconds (default is 5s, too short for CI browser launch)
+setDefaultTimeout(30000);
 
 // Page objects
 const LoginPage = require('../pages/LoginPage');
